@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenLiterals(pkg, dir string) {
@@ -12,5 +13,5 @@ func GenLiterals(pkg, dir string) {
 		Regex:        "literal",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "literals.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "literals.go"))
 }

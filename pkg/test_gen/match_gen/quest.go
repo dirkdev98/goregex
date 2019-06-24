@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenQuest(pkg, dir string) {
@@ -18,5 +19,5 @@ func GenQuest(pkg, dir string) {
 		Regex:        "a?",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "quest.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "quest.go"))
 }

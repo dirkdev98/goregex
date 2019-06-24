@@ -1,4 +1,4 @@
-package match_gen
+package test_gen
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func formatAndSave(output string, err error, fileName string) {
+func FormatAndSave(output string, err error, fileName string) {
 	if err != nil {
 		panic(err)
 	}

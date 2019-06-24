@@ -27,6 +27,7 @@ func RepeatLiteral(src string) bool {
 		if !repeatBoolResult36 {
 			if repeatIdx35 > 2 {
 				idx = repeatIdxResult37
+				isMatching = true
 				break
 			} else {
 				isMatching = false
@@ -34,6 +35,7 @@ func RepeatLiteral(src string) bool {
 			}
 		} else if repeatBoolResult36 && repeatIdx35 == 2 {
 			idx = repeatIdxResult37
+			isMatching = true
 		}
 	}
 
@@ -72,6 +74,7 @@ func RepeatLiteralMinMax(src string) bool {
 		if !repeatBoolResult40 {
 			if repeatIdx39 > 2 {
 				idx = repeatIdxResult41
+				isMatching = true
 				break
 			} else {
 				isMatching = false
@@ -79,6 +82,7 @@ func RepeatLiteralMinMax(src string) bool {
 			}
 		} else if repeatBoolResult40 && repeatIdx39 == 5 {
 			idx = repeatIdxResult41
+			isMatching = true
 		}
 	}
 
@@ -158,6 +162,7 @@ func RepeatWithAlternate(src string) bool {
 					if !repeatBoolResult50 {
 						if repeatIdx49 > 2 {
 							idx = repeatIdxResult51
+							alternateResult48 = true
 							break
 						} else {
 							alternateResult48 = false
@@ -165,6 +170,7 @@ func RepeatWithAlternate(src string) bool {
 						}
 					} else if repeatBoolResult50 && repeatIdx49 == 2 {
 						idx = repeatIdxResult51
+						alternateResult48 = true
 					}
 				}
 

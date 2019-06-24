@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenStar(pkg, dir string) {
@@ -15,5 +16,5 @@ func GenStar(pkg, dir string) {
 		Regex:        "a*b*",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "star.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "star.go"))
 }

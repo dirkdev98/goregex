@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenAlternate(pkg, dir string) {
@@ -15,5 +16,5 @@ func GenAlternate(pkg, dir string) {
 		Regex:        "ab|cd|ef|gh|ij|kl",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "alternate.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "alternate.go"))
 }

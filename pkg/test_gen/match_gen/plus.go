@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenPlus(pkg, dir string) {
@@ -15,5 +16,5 @@ func GenPlus(pkg, dir string) {
 		Regex:        "a+b+",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "plus.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "plus.go"))
 }

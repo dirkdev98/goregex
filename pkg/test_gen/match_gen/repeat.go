@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenRepeat(pkg, dir string) {
@@ -18,5 +19,5 @@ func GenRepeat(pkg, dir string) {
 		Regex:        "ab|ac{2}",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "repeat.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "repeat.go"))
 }

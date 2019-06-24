@@ -4,6 +4,7 @@ import (
 	"path"
 
 	"github.com/dirkdev98/goregex/pkg/builder"
+	"github.com/dirkdev98/goregex/pkg/test_gen"
 )
 
 func GenCharClass(pkg, dir string) {
@@ -18,5 +19,5 @@ func GenCharClass(pkg, dir string) {
 		Regex:        "[\\d]+",
 	})
 
-	formatAndSave(str, err, path.Join(dir, "charclass.go"))
+	test_gen.FormatAndSave(str, err, path.Join(dir, "charclass.go"))
 }

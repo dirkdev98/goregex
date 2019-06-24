@@ -109,7 +109,8 @@ func (b *funcBuilder) traverseRegexp(reg *syntax.Regexp, info genInfo) {
 	// case syntax.OpEndText       :
 	// case syntax.OpWordBoundary  :
 	// case syntax.OpNoWordBoundary:
-	// case syntax.OpCapture:
+	case syntax.OpCapture:
+		b.addConcat(reg, info)
 	case syntax.OpStar:
 		b.addStar(reg, info)
 	case syntax.OpPlus:
@@ -250,6 +251,7 @@ for %[1]s := 1; %[1]s <= %[2]d; %[1]s++ {
 	if !%[1]s {
 		if %[5]s > %[6]d {
 			%[4]s = %[2]s
+			%[3]s = true
 			break
 		} else {
 			%[3]s = false
@@ -257,6 +259,7 @@ for %[1]s := 1; %[1]s <= %[2]d; %[1]s++ {
 		}
 	} else if %[1]s && %[5]s == %[7]d {
 		%[4]s = %[2]s	
+		%[3]s = true
 	} 
 }
 `,

@@ -57,6 +57,10 @@ func TestRepeatWithAlternate(t *testing.T) {
 		t.Fail()
 	}
 
+	if ok := match_gen.RepeatWithAlternate("acc"); !ok {
+		t.Fail()
+	}
+
 	if ok := match_gen.RepeatWithAlternate("accc"); ok {
 		t.Fail()
 	}
