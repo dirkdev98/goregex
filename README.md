@@ -1,5 +1,9 @@
 # GOREGEX
 
+[![Build Status](https://api.cirrus-ci.com/github/dirkdev98/goregex.svg)](https://cirrus-ci.com/github/dirkdev98/goregex)
+[![Go Report](https://goreportcard.com/badge/github.com/dirkdev98/goregex)](https://goreportcard.com/report/github.com/dirkdev98/goregex)
+
+
 Generating code for static regex
 
 ### Limitations
